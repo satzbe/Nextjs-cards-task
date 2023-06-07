@@ -3,6 +3,7 @@ import axios from 'axios'
 import Head from 'next/head'
 import Link from 'next/link'
 import { appProps } from '../types'
+import Header from '@/components/Header'
 
 export default function Home({ datas }: appProps) {
   console.log('datas', datas);
@@ -12,9 +13,18 @@ export default function Home({ datas }: appProps) {
       <Head>
         <title>Dynamic Cards</title>
       </Head>
-      <Link href='/details'>
-        <Card />
-      </Link>
+      <Header />
+      <div className="container mx-auto">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {datas.map(card => (
+              <Link key={card.id} href={`/details/${card.id}`}>
+                <Card id={card.id} url={card.download_url} name={card.author} />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

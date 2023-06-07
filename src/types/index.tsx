@@ -6,5 +6,11 @@ export interface appProps {
         download_url: string
         height: number
         width: number
-    }
+    }[]
+}
+
+export interface cardProps {
+    id: string
+    url: string
+    name: string
 }
