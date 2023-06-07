@@ -12,7 +12,7 @@ const Details = ({ datas }: appProps) => {
     const router = useRouter()
     return (
         <>
-            <div className='fixed underline text-gray-400 text-xl top-6 left-3 cursor-pointer flex justify-center items-center font-semibold' onClick={() => router.push('/')}>
+            <div className='fixed hover:text-black underline text-gray-400 text-xl top-6 left-3 cursor-pointer flex justify-center items-center font-semibold' onClick={() => router.push('/')}>
                 <span className='mr-2'>{backSvg}</span> Back</div>
             <div className="mt-6 text-center">
                 <p className="text-2xl text-red-900">{author}</p>
@@ -21,7 +21,7 @@ const Details = ({ datas }: appProps) => {
                 <img
                     src={download_url}
                     alt="Large Image"
-                    className="m-auto w-[800px]"
+                    className="m-auto w-[800px] rounded-md"
                 />
 
             </div>
