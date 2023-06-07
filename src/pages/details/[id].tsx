@@ -12,15 +12,15 @@ const Details = ({ datas }: appProps) => {
     const router = useRouter()
     return (
         <>
-            <div className='container ml-20 h-20  underline text-gray-400 text-xl cursor-pointer flex justify-start items-center font-semibold' >
-                <span className='hover:text-black contents' onClick={() => router.push('/')}><span className='mr-2'>{backSvg}</span> Back</span></div>
-            <div className="container m-auto flex h-screen">
+            <div className='container h-20  underline text-gray-400 text-xl cursor-pointer flex justify-start items-center font-semibold' >
+                <span className='ml-12  hover:text-black flex items-center' onClick={() => router.push('/')}><span className='mr-2'>{backSvg}</span> Back</span></div>
+            <div className="container m-auto flex">
                 <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-7/12">
                         <img
                             src={download_url}
                             alt="Image"
-                            className="w-full h-[650px]"
+                            className="w-full h-max-[550px] h-min-auto"
                         />
                     </div>
                     <div className="w-full lg:w-5/12 px-4 py-6">
