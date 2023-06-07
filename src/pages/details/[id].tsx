@@ -12,18 +12,28 @@ const Details = ({ datas }: appProps) => {
     const router = useRouter()
     return (
         <>
-            <div className='fixed hover:text-black underline text-gray-400 text-xl top-6 left-3 cursor-pointer flex justify-center items-center font-semibold' onClick={() => router.push('/')}>
-                <span className='mr-2'>{backSvg}</span> Back</div>
-            <div className="mt-6 text-center">
-                <p className="text-2xl text-red-900">{author}</p>
-            </div>
-            <div className="flex flex-col items-center justify-center h-screen">
-                <img
-                    src={download_url}
-                    alt="Large Image"
-                    className="m-auto w-[800px] rounded-md"
-                />
-
+            <div className='container ml-20 h-20  underline text-gray-400 text-xl cursor-pointer flex justify-start items-center font-semibold' >
+                <span className='hover:text-black contents' onClick={() => router.push('/')}><span className='mr-2'>{backSvg}</span> Back</span></div>
+            <div className="container m-auto flex">
+                <div className="flex flex-wrap justify-center">
+                    <div className="w-full lg:w-7/12">
+                        <img
+                            src={download_url}
+                            alt="Image"
+                            className="w-full h-auto"
+                        />
+                    </div>
+                    <div className="w-full lg:w-5/12 px-4 py-6">
+                        <h2 className="text-2xl font-bold mb-4">{author}</h2>
+                        <p className="text-lg text-gray-600 font-mono">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                            consectetur, est non auctor consectetur, ligula mi ullamcorper
+                            massa, eu faucibus libero tortor at sem. Integer iaculis tristique
+                            eros, sit amet pulvinar velit ultricies a. Suspendisse luctus
+                            tortor lacus, eu ullamcorper lectus blandit non.
+                        </p>
+                    </div>
+                </div>
             </div>
         </>
 
