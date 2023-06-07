@@ -20,7 +20,7 @@ const Details = ({ datas }: appProps) => {
                         <img
                             src={download_url}
                             alt="Image"
-                            className="w-full h-max-[550px] h-min-auto"
+                            className="w-full h-[550px]"
                         />
                     </div>
                     <div className="w-full lg:w-5/12 px-4 py-6">
