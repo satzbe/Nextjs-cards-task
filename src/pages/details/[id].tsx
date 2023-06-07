@@ -1,5 +1,4 @@
 import { appProps } from '@/types'
-import { GetServerSideProps } from 'next'
 import React from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/router'
@@ -36,7 +35,6 @@ export default Details
 // This gets called on every request
 export async function getServerSideProps(ctx: any) {
     // Fetch data from external API
-    console.log('ctx', ctx.query?.id)
     const datas: appProps[] = [];
     await axios.get(`https://picsum.photos/id/${ctx.query.id}/info`).then(({ data }) => {
         datas.push(data)
